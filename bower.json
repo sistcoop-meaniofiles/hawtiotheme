@@ -8,6 +8,7 @@
     "angular-messages": "1.3.2",
     "angular-sanitize": "1.3.2",
     "angular-animate": "1.3.2",
+    "angular-file-upload": "~1.1.5",
     "angular-ui-grid": "~3.0.0-rc.20",
     "angular-ui-select": "0.11.2",
     "angular-ui-select-utils": "https://github.com/sistcoop-angularjsfiles/ui-select-utils.git#master",

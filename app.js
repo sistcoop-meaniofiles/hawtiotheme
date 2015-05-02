@@ -34,6 +34,8 @@ Hawtiotheme.register(function(app, auth, database) {
   Hawtiotheme.aggregateAsset('js', '../lib/angular-sanitize/angular-sanitize.js');
   //angular-animate
   Hawtiotheme.aggregateAsset('js', '../lib/angular-animate/angular-animate.js');
+  //angular-file-upload
+  Hawtiotheme.aggregateAsset('js', '../lib/angular-file-upload/angular-file-upload.js');
   //angular-ui-grid
   Hawtiotheme.aggregateAsset('js', '../lib/angular-ui-grid/ui-grid.js');
   Hawtiotheme.aggregateAsset('css', '../lib/angular-ui-grid/ui-grid.css');
@@ -78,6 +80,7 @@ Hawtiotheme.register(function(app, auth, database) {
     'ngMessages',
     'ngSanitize',
     'ngAnimate',
+    'angularFileUpload',
     'ui.grid',
     'ui.grid.edit',
     'ui.grid.selection',
