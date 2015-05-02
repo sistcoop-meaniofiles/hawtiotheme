@@ -2,6 +2,12 @@
 
 /* jshint -W098 */
 
+angular.module('mean.hawtiotheme').config(['$viewPathProvider', function($viewPathProvider) {
+
+  $viewPathProvider.override('system/views/index.html', 'hawtiotheme/views/index.html');
+
+}]);
+
 angular.module('mean.hawtiotheme').config(function(sgIso3166Provider) {
   sgIso3166Provider.restUrl = 'http://localhost:8080/iso3166/rest';
 });

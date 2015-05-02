@@ -74,6 +74,7 @@ Hawtiotheme.register(function(app, auth, database) {
 
 
   Hawtiotheme.angularDependencies([
+    'mean.system',
     'ngMessages',
     'ngSanitize',
     'ngAnimate',

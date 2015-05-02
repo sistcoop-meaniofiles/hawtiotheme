@@ -12,10 +12,13 @@
             <img src="hawtiotheme/assets/img/logo-origin-thin.svg" alt="OpenShift Origin">
         </a>
     </div>
-    <div class="collapse navbar-collapse navbar-collapse-1">
+    <div class="collapse navbar-collapse navbar-collapse-1" data-ng-controller="KeycloakAccountManagementController">
         <ul class="nav navbar-nav navbar-utility">
             <li>
-                <a href="http://docs.openshift.org/latest/welcome/index.html">Documentation</a>
+                <a href=""><strong>Bienvenido </strong>{{user.username}}</a>
+            </li>
+            <li>
+                <a href=""><strong>Rol: </strong>CAJERO</a>
             </li>
             <li class="dropdown" dropdown>
                 <a href="#" class="dropdown" dropdown-toggle>
@@ -24,14 +27,14 @@
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="#">Account</a>
+                        <a ui-sref="keycloak.auth.accountManagement">Account</a>
                     </li>
                     <li>
                         <a href="#">Settings</a>
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <a href="logout">Log out</a>
+                        <a ui-sref="keycloak.auth.logout">Log out</a>
                     </li>
                 </ul>
             </li>
