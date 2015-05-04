@@ -32,6 +32,10 @@ angular.module('mean.hawtiotheme').config(function(sgRrhhProvider) {
   sgRrhhProvider.restUrl = 'http://localhost:8080/rrhh/rest';
 });
 
+angular.module('mean.hawtiotheme').config(function(sgCooperativaProvider) {
+  sgCooperativaProvider.restUrl = 'http://localhost:8080/cooperativa/rest';
+});
+
 angular.module('mean.hawtiotheme').run(function(editableOptions, editableThemes) {
   editableThemes.bs3.inputClass = 'input-sm form-control';
   editableThemes.bs3.buttonsClass = 'btn-sm';
