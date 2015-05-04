@@ -51,6 +51,9 @@ Hawtiotheme.register(function(app, auth, database) {
   //angular-toastr
   Hawtiotheme.aggregateAsset('css', '../lib/angular-toastr/dist/angular-toastr.css');
   Hawtiotheme.aggregateAsset('js', '../lib/angular-toastr/dist/angular-toastr.tpls.js');
+  //angular-spinner
+  Hawtiotheme.aggregateAsset('js', '../lib/spin.js/spin.js', {global:true,  weight: -5, group: 'header'});
+  Hawtiotheme.aggregateAsset('js', '../lib/angular-spinner/angular-spinner.js');
   //angular-xeditable
   Hawtiotheme.aggregateAsset('css', '../lib/angular-xeditable/dist/css/xeditable.css');
   Hawtiotheme.aggregateAsset('js', '../lib/angular-xeditable/dist/js/xeditable.js');
@@ -89,6 +92,7 @@ Hawtiotheme.register(function(app, auth, database) {
     'ui.utils',
     'ui.utils.masks',
     'toastr',
+    'angularSpinner',
     'xeditable',
     'ng-autofocus',
     'restangular',
