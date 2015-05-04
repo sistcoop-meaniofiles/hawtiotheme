@@ -27,6 +27,7 @@
     "sg-persona": "https://github.com/sistcoop-restangularfiles/sg-persona.git#master",
     "sg-producto": "https://github.com/sistcoop-restangularfiles/sg-producto.git#master",
     "sg-rrhh": "https://github.com/sistcoop-restangularfiles/sg-rrhh.git#master",
+    "sg-cooperativa": "https://github.com/sistcoop-restangularfiles/sg-cooperativa.git#master",
     "sg-utils": "https://github.com/sistcoop-angularjsfiles/sg-utils.git#master"
   }
 }
