@@ -21,7 +21,7 @@ Hawtiotheme.register(function(app, auth, database) {
 
   //meanio theme
   Hawtiotheme.aggregateAsset('css', 'hawtiotheme.css');
-  Hawtiotheme.aggregateAsset('css', 'main.css', {global:true,  weight: -4, group: 'footer'});
+  Hawtiotheme.aggregateAsset('css', '../lib/openshift/dist/css/main.css', {global:true,  weight: -4, group: 'footer'});
 
   //themecss
   Hawtiotheme.aggregateAsset('css', '../lib/patternfly/dist/css/patternfly.css', {global:true,  weight: -5, group: 'footer'});
