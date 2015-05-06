@@ -76,6 +76,8 @@ Hawtiotheme.register(function(app, auth, database) {
   Hawtiotheme.aggregateAsset('js', '../lib/sg-rrhh/dist/sg-rrhh.js');
   //sg-cooperativa
   Hawtiotheme.aggregateAsset('js', '../lib/sg-cooperativa/dist/sg-cooperativa.js');
+  //sg-socio
+  Hawtiotheme.aggregateAsset('js', '../lib/sg-socio/dist/sg-socio.js');
   //sg-utils
   Hawtiotheme.aggregateAsset('js', '../lib/sg-utils/dist/sg-utils.js');
 
@@ -105,6 +107,7 @@ Hawtiotheme.register(function(app, auth, database) {
     'sg-producto',
     'sg-rrhh',
     'sg-cooperativa',
+    'sg-socio',
     'sg-utils'
   ]);
 
