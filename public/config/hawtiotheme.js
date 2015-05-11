@@ -8,6 +8,10 @@ angular.module('mean.hawtiotheme').config(['$viewPathProvider', function($viewPa
 
 }]);
 
+angular.module('mean.hawtiotheme').config(function($provide, sgKeycloakProvider) {
+  sgKeycloakProvider.restUrl = 'http://localhost:8080/auth/admin/realms/sistcoop';
+});
+
 angular.module('mean.hawtiotheme').config(function(sgIso3166Provider) {
   sgIso3166Provider.restUrl = 'http://localhost:8080/iso3166/rest';
 });
