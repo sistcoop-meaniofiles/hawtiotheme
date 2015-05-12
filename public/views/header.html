@@ -21,10 +21,16 @@
                 </a>
             </li>
             <li>
-                <a href=""><strong>Bienvenido </strong>{{user.username}}</a>
+                <a href=""><strong>Sucursal: </strong>{{session.sucursal}}</a>
+            </li>
+            <li>
+                <a href=""><strong>Agencia: </strong>{{session.agencia}}</a>
             </li>
             <li>
                 <a href=""><strong>Rol: </strong>{{user.roles.toString()}}</a>
+            </li>
+            <li>
+                <a href=""><strong>Bienvenido </strong>{{user.username}}</a>
             </li>
             <li class="dropdown" dropdown>
                 <a href="#" class="dropdown" dropdown-toggle>
