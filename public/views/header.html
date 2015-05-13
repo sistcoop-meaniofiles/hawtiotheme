@@ -20,11 +20,15 @@
                     <strong>Mensajes: </strong>02
                 </a>
             </li>
+            {{session.agencia}}
             <li>
-                <a href=""><strong>Sucursal: </strong>{{session.sucursal}}</a>
+                <a href="" ng-click="imprimir()"><strong>Sucursal: </strong><span ng-bind="session.sucursal"></span></a>
             </li>
             <li>
-                <a href=""><strong>Agencia: </strong>{{session.agencia}}</a>
+                <a href="" ng-click="imprimir()"><strong>Agencia: </strong><span ng-bind="session.agencia"></span></a>
+            </li>
+            <li>
+                <a href=""><strong>Trabajador: </strong>{{session.trabajadorCaja.trabajador.tipoDocumento}}:{{session.trabajadorCaja.trabajador.numeroDocumento}}</a>
             </li>
             <li>
                 <a href=""><strong>Rol: </strong>{{user.roles.toString()}}</a>
