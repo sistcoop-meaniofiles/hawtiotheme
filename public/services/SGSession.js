@@ -16,6 +16,7 @@ angular.module('mean.rrhh').factory('SGSession',
                 SGTrabajadorUsuario.$findByUsuario(username).then(
                     function (response) {
 
+                        //si se encontró un trabajadorCaja
                         if (response) {
                             SGTrabajador.$new(response.trabajador.id).$getAgencia().then(
                                 function (agencia) {
@@ -28,7 +29,7 @@ angular.module('mean.rrhh').factory('SGSession',
                             );
                         }
                         else {
-                            deferred.reject('TrabajadorUsuario no tiene Trabajador');
+                            deferred.resolve(undefined);
                         }
 
                     },
@@ -52,11 +53,12 @@ angular.module('mean.rrhh').factory('SGSession',
                 SGTrabajadorUsuario.$findByUsuario(username).then(
                     function (response) {
 
+                        //si se encontró un trabajadorCaja
                         if (response) {
                             deferred.resolve(SGTrabajador.$new(response.trabajador.id).$getAgencia());
                         }
                         else {
-                            deferred.reject('TrabajadorUsuario no tiene Trabajador');
+                            deferred.resolve(undefined);
                         }
 
                     },
@@ -88,6 +90,7 @@ angular.module('mean.rrhh').factory('SGSession',
                 SGTrabajadorUsuario.$findByUsuario(username).then(
                     function (response) {
 
+                        //si se encontró un trabajadorCaja
                         if (response) {
                             var tipoDocumento = response.trabajador.tipoDocumento;
                             var numeroDocumento = response.trabajador.numeroDocumento;
@@ -95,7 +98,7 @@ angular.module('mean.rrhh').factory('SGSession',
                             deferred.resolve(SGTrabajadorCaja.$findByTipoNumeroDocumento(tipoDocumento, numeroDocumento));
                         }
                         else {
-                            deferred.reject('TrabajadorUsuario no tiene Trabajador');
+                            deferred.resolve(undefined);
                         }
 
                     },
