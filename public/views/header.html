@@ -14,27 +14,71 @@
     </div>
     <div class="collapse navbar-collapse navbar-collapse-1" data-ng-controller="KeycloakAccountManagementController">
         <ul class="nav navbar-nav navbar-utility">
-            <li>
-                <a href="">
+            <li class="dropdown" dropdown>
+                <a href="" class="dropdown" dropdown-toggle>
                     <span class="icon-info-sign icon-white"></span>
                     <strong>Mensajes: </strong>02
                 </a>
+                <div class="dropdown-menu infotip bottom-right">
+                    <div class="arrow"></div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="i pficon pficon-info"></span>
+                            Added Datasources TestDS
+                        </li>
+                        <li class="list-group-item">
+                            <span class="i pficon pficon-info"></span>
+                            Modified Datasources ExampleDS
+                        </li>
+                    </ul>
+                    <div class="footer"><a href="#">Limpiar mensajes</a></div>
+                </div>
             </li>
-            {{session.agencia}}
             <li>
-                <a href="" ng-click="imprimir()"><strong>Sucursal: </strong><span ng-bind="session.sucursal"></span></a>
+                <a href="">
+                    <strong>Rol: </strong>
+                    <span ng-bind="user.roles.toString()"></span>
+
+                    <span ng-if="session.caja">(</span>
+                    <span ng-if="session.caja" ng-bind="session.caja.denominacion"></span>
+                    <span ng-if="session.caja">)</span>
+                </a>
             </li>
             <li>
-                <a href="" ng-click="imprimir()"><strong>Agencia: </strong><span ng-bind="session.agencia"></span></a>
+                <a href="">
+                    <strong>Usuario: </strong>
+                    <span ng-bind="user.username"></span>
+                </a>
             </li>
-            <li>
-                <a href=""><strong>Trabajador: </strong>{{session.trabajadorCaja.trabajador.tipoDocumento}}:{{session.trabajadorCaja.trabajador.numeroDocumento}}</a>
-            </li>
-            <li>
-                <a href=""><strong>Rol: </strong>{{user.roles.toString()}}</a>
-            </li>
-            <li>
-                <a href=""><strong>Bienvenido </strong>{{user.username}}</a>
+            <li class="dropdown" dropdown>
+                <a href="#" class="dropdown" dropdown-toggle>
+                    <span class="pficon pficon-add"></span>
+                </a>
+                <div class="dropdown-menu infotip bottom-right">
+                    <div class="arrow"></div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <span class="i fa fa-angle-double-right"></span>
+                            <span>Sucursal: </span>
+                            <span ng-if="session.sucursal.denominacion" ng-bind="session.sucursal.denominacion"></span>
+                            <span ng-if="!session.sucursal.denominacion">No definido</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="i fa fa-angle-double-right"></span>
+                            <span>Agencia: </span>
+                            <span ng-if="session.agencia.denominacion" ng-bind="session.agencia.denominacion"></span>
+                            <span ng-if="!session.agencia.denominacion">No definido</span>
+                        </li>
+                        <li class="list-group-item">
+                            <span class="i fa fa-angle-double-right"></span>
+                            <span>Trabajador: </span>
+                            <span ng-if="session.trabajadorCaja.trabajador" ng-bind="session.trabajadorCaja.trabajador.tipoDocumento"></span>
+                            <span ng-if="session.trabajadorCaja.trabajador">/</span>
+                            <span ng-if="session.trabajadorCaja.trabajador" ng-bind="session.trabajadorCaja.trabajador.numeroDocumento"></span>
+                            <span ng-if="!session.trabajadorCaja.trabajador">No definido</span>
+                        </li>
+                    </ul>
+                </div>
             </li>
             <li class="dropdown" dropdown>
                 <a href="#" class="dropdown" dropdown-toggle>
