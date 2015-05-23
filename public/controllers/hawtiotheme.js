@@ -2,10 +2,10 @@
 
 /* jshint -W098 */
 angular.module('mean.hawtiotheme').controller('HawtiothemeController', ['$scope', 'Global', 'Hawtiotheme',
-  function($scope, Global, Hawtiotheme) {
-    $scope.global = Global;
-    $scope.package = {
-      name: 'hawtiotheme'
-    };
-  }
+    function ($scope, Global, Hawtiotheme) {
+        $scope.global = Global;
+        $scope.package = {
+            name: 'hawtiotheme'
+        };
+    }
 ]);

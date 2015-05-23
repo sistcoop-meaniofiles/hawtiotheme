@@ -13,11 +13,14 @@ var Hawtiotheme = new Module('hawtiotheme');
  */
 Hawtiotheme.register(function (app, auth, database) {
 
+    // Set views path, template engine and default layout
     app.set('views', __dirname + '/server/views');
 
     //We enable routing. By default the Package Object is passed to the routes
     Hawtiotheme.routes(app, auth, database);
 
+    Hawtiotheme.aggregateAsset('js', '../lib/keycloak/dist/keycloak.js', {global:true,  weight: -4, group: 'header'});
+    Hawtiotheme.aggregateAsset('js', '../sistcoop/dist/sistcoop.js', {global:true,  weight: -3, group: 'header'});
 
     //meanio theme
     Hawtiotheme.aggregateAsset('css', 'hawtiotheme.css');
