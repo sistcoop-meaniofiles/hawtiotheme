@@ -20,7 +20,7 @@ Hawtiotheme.register(function (app, auth, database) {
     Hawtiotheme.routes(app, auth, database);
 
     Hawtiotheme.aggregateAsset('js', '../lib/keycloak/dist/keycloak.js', {global:true,  weight: -4, group: 'header'});
-    Hawtiotheme.aggregateAsset('js', '../sistcoop/dist/sistcoop.js', {global:true,  weight: -3, group: 'header'});
+    Hawtiotheme.aggregateAsset('js', '../sistcoop/sistcoop.js', {global:true,  weight: -3, group: 'header'});
 
     //meanio theme
     Hawtiotheme.aggregateAsset('css', 'hawtiotheme.css');
