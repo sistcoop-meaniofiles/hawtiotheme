@@ -10,7 +10,7 @@
     </a>
 </div>
 <div class="collapse navbar-collapse navbar-collapse-1" data-role="navigation" ng-controller="HeaderController as hdrctr">
-    <ul class="nav navbar-nav navbar-utility" data-ng-controller="KeycloakAccountManagementController">
+    <ul class="nav navbar-nav navbar-utility" data-ng-controller="KeycloakController">
 
         <li class="dropdown" dropdown>
             <a href="" class="dropdown" dropdown-toggle>
@@ -85,14 +85,14 @@
             </a>
             <ul class="dropdown-menu">
                 <li>
-                    <a ui-sref="keycloak.auth.account">Account</a>
+                    <a href="" data-ng-click="accountManagement()">Account</a>
                 </li>
                 <li>
                     <a href="">Settings</a>
                 </li>
                 <li class="divider"></li>
                 <li>
-                    <a ui-sref="keycloak.auth.logout">Log out</a>
+                    <a href="" data-ng-click="logout()">Log out</a>
                 </li>
             </ul>
         </li>

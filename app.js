@@ -31,11 +31,11 @@ Hawtiotheme.register(function (app, auth, database) {
     });
 
     //themecss
-    Hawtiotheme.aggregateAsset('css', '../lib/patternfly/dist/css/patternfly.css', {
+    /*Hawtiotheme.aggregateAsset('css', '../lib/patternfly/dist/css/patternfly.css', {
         global: true,
         weight: -5,
         group: 'footer'
-    });
+    });*/
     Hawtiotheme.aggregateAsset('css', '../lib/messenger/build/css/messenger-theme-flat.css', {
         global: true,
         weight: -6,
@@ -70,9 +70,6 @@ Hawtiotheme.register(function (app, auth, database) {
     //angular-toastr
     Hawtiotheme.aggregateAsset('css', '../lib/angular-toastr/dist/angular-toastr.css');
     Hawtiotheme.aggregateAsset('js', '../lib/angular-toastr/dist/angular-toastr.tpls.js');
-    //angular-spinner
-    Hawtiotheme.aggregateAsset('js', '../lib/spin.js/spin.js', {global: true, weight: -5, group: 'header'});
-    Hawtiotheme.aggregateAsset('js', '../lib/angular-spinner/angular-spinner.js');
     //angular-ladda
     Hawtiotheme.aggregateAsset('js', '../lib/ladda/dist/spin.min.js', {global: true, weight: -7, group: 'header'});
     Hawtiotheme.aggregateAsset('js', '../lib/ladda/dist/ladda.min.js', {global: true, weight: -6, group: 'header'});
@@ -120,7 +117,6 @@ Hawtiotheme.register(function (app, auth, database) {
         'ui.utils',
         'ui.utils.masks',
         'toastr',
-        'angularSpinner',
         'angular-ladda',
         'xeditable',
         'ng-autofocus',
