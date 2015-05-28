@@ -192,16 +192,16 @@
                 + '&referrer_uri=' + encodeURIComponent(adapter.redirectUri(options));
 
             return url;
-        }
+        };
 
         kc.accountManagement = function () {
             return adapter.accountManagement();
-        }
+        };
 
         kc.hasRealmRole = function (role) {
             var access = kc.realmAccess;
             return !!access && access.roles.indexOf(role) >= 0;
-        }
+        };
 
         kc.hasResourceRole = function (role, resource) {
             if (!kc.resourceAccess) {
@@ -210,7 +210,11 @@
 
             var access = kc.resourceAccess[resource || kc.clientId];
             return !!access && access.roles.indexOf(role) >= 0;
-        }
+        };
+
+        kc.hasAdminRole = function() {
+            return kc.sucursal === 'master';
+        };
 
         kc.loadUserProfile = function () {
             var url = getRealmUrl() + '/account';

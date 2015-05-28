@@ -9,7 +9,7 @@ angular.module('mean.hawtiotheme').config(['$viewPathProvider', function ($viewP
 }]);
 
 angular.module('mean.hawtiotheme').config(function ($provide, sgKeycloakProvider) {
-    sgKeycloakProvider.restUrl = 'http://localhost:8080/auth/admin/realms/sistcoop';
+    sgKeycloakProvider.restUrl = 'http://localhost:8080/auth/admin/realms/sistcoop-default';
 });
 
 angular.module('mean.hawtiotheme').config(function (sgIso3166Provider) {
