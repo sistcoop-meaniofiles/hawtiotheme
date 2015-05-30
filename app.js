@@ -14,7 +14,7 @@ var Hawtiotheme = new Module('hawtiotheme');
 Hawtiotheme.register(function (app, auth, database) {
 
     // Set views path, template engine and default layout
-    app.set('views', __dirname + '/server/views');
+    //app.set('views', __dirname + '/server/views');
 
     //We enable routing. By default the Package Object is passed to the routes
     Hawtiotheme.routes(app, auth, database);
@@ -24,7 +24,7 @@ Hawtiotheme.register(function (app, auth, database) {
 
     //meanio theme
     Hawtiotheme.aggregateAsset('css', 'hawtiotheme.css');
-    Hawtiotheme.aggregateAsset('css', '../lib/openshift/dist/css/main.css', {
+    Hawtiotheme.aggregateAsset('css', '../lib/sistcoop/dist/css/sistcoop.css', {
         global: true,
         weight: -4,
         group: 'footer'
