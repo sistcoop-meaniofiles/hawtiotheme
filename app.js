@@ -24,7 +24,7 @@ Hawtiotheme.register(function (app, auth, database) {
 
     //meanio theme
     Hawtiotheme.aggregateAsset('css', 'hawtiotheme.css');
-    Hawtiotheme.aggregateAsset('css', '../lib/openshift/dist/css/main.css', {
+    Hawtiotheme.aggregateAsset('css', '../lib/sistcoop/dist/openshift/css/main.css', {
         global: true,
         weight: -4,
         group: 'footer'
